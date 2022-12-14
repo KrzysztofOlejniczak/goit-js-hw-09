@@ -1,7 +1,5 @@
 'use strict';
 
-import { Notify } from 'notiflix/build/notiflix-notify-aio';
-
 const body = document.body;
 const startBtn = document.querySelector('[data-start]');
 const stopBtn = document.querySelector('[data-stop]');
@@ -17,14 +15,12 @@ const backgroundColorChange = () => {
 };
 
 const startColorChange = () => {
-  Notify.info('Starting background color change');
   intervalId = setInterval(backgroundColorChange, 1000);
   stopBtn.disabled = false;
   startBtn.disabled = true;
 };
 
 const stopColorChange = () => {
-  Notify.info('Background color change stopped');
   clearInterval(intervalId);
   stopBtn.disabled = true;
   startBtn.disabled = false;
