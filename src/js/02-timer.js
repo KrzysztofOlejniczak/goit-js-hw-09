@@ -4,6 +4,8 @@ import { Notify } from 'notiflix/build/notiflix-notify-aio';
 import flatpickr from 'flatpickr';
 import 'flatpickr/dist/flatpickr.min.css';
 
+Notify.init({ position: 'center-top' });
+
 let timerTimestamp = 0;
 let intervalId = null;
 
