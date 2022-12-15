@@ -85,13 +85,14 @@ const timer = () => {
   valueHours.textContent = timerCalculated.hours;
   valueMinutes.textContent = timerCalculated.minutes;
   valueSeconds.textContent = timerCalculated.seconds;
-  if (timerCalculatedRaw <= 0) {
+  if (timerCalculatedRaw <= 1000) {
     valueDays.textContent = '00';
     valueHours.textContent = '00';
     valueMinutes.textContent = '00';
     valueSeconds.textContent = '00';
     btn.disabled = false;
     clearInterval(intervalId);
+    Notify.info('Timer finished!');
   }
 };
 
